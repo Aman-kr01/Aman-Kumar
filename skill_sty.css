@@ -1,0 +1,65 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.skill-category {
+    margin-bottom: 30px;
+}
+.skill-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+.skill-item {
+    background-color: #e9ecef;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+/* Optional: Add visual representation for skill level */
+.skill-item::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #007bff;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+.level-beginner::before {
+    width: 30%;
+}
+.level-intermediate::before {
+    width: 80%;
+}
+.level-advanced::before {
+    width: 100%;
+}
+/* Responsive adjustments  */
+@media (max-width: 600px) {
+    .skill-list {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
+.skill-item:hover{
+    font-weight: bolder;
+    cursor: pointer;
+}
